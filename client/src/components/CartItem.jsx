@@ -7,7 +7,7 @@ const CartItem = ({ item, updateQuantity, removeFromCart }) => {
             <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded" />
             <div className="flex-1">
                 <h3 className="font-medium">{item.name}</h3>
-                <p className="text-sm opacity-70">${item.price}</p>
+                <p className="text-sm opacity-70">Rp. {item.price}</p>
             </div>
             <div className="flex items-center gap-2">
                 <button

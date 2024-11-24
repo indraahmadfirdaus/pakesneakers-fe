@@ -12,7 +12,7 @@ const Navbar = ({ setIsCheckoutOpen }) => {
                     <a className="btn btn-ghost normal-case text-xl">PakeSneakers</a>
                 </div>
                 <div className="flex-none">
-                    <button className="btn btn-ghost" onClick={() => setIsCheckoutOpen(true)}>
+                    <button className="btn btn-ghost" onClick={() => document.getElementById('modal_checkout').showModal()}>
                         <ShoppingCart />
                         <span className="ml-2 badge badge-sm">{cart.length}</span>
                     </button>

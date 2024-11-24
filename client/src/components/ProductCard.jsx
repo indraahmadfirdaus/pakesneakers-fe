@@ -14,7 +14,7 @@ const ProductCard = ({ product, addToCart }) => {
                 <h2 className="card-title">{product.name}</h2>
                 <p className="opacity-70">{product.description}</p>
                 <div className="flex items-center gap-2 mt-2">
-                    <span className="text-xl font-semibold">${product.price}</span>
+                    <span className="text-xl font-semibold">Rp. {product.price}</span>
                 </div>
                 <div className="flex items-center gap-2 mt-2">
                     <button
