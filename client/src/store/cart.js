@@ -60,8 +60,8 @@ const useCartStore = create(
       }
     }),
     {
-      name: 'cart-store', // Name that will appear in Redux DevTools
-      enabled: process.env.NODE_ENV === 'development' // Only enable in development
+      name: 'cart-store',
+      enabled: process.env.NODE_ENV === 'development'
     }
   )
 );

@@ -2,7 +2,7 @@ import React from 'react'
 import useCartStore from '../store/cart'
 import CartItem from './CartItem'
 
-const CheckoutModal = ({ isCheckoutOpen, handleCheckout, setIsCheckoutOpen }) => {
+const CheckoutModal = ({ handleCheckout }) => {
     const cart = useCartStore(st => st.cart)
     const updateQuantity = useCartStore(st => st.updateQuantity)
     const removeFromCart = useCartStore(st => st.removeFromCart)

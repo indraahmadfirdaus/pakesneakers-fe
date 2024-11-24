@@ -6,7 +6,7 @@ const ProductCard = ({ product, addToCart }) => {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-md">
             <figure className="px-4 pt-4">
                 <img src={product.image} alt={product.name} className="rounded-xl h-48 w-full object-cover" />
             </figure>

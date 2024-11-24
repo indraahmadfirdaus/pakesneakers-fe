@@ -1,30 +1,51 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from 'react-router-dom';
 import './App.css'
-import MainSections from './sections/MainSections';
-import CheckoutModal from './components/CheckoutModal';
-import Navbar from './components/Navbar';
+
+import Home from './pages/Home';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import SuccessPage from './pages/SuccessPage';
 
 const App = () => {
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-
-  const handleCheckout = () => {
-    alert('Thank you for your purchase!');
-    setCart([]);
-    setIsCheckoutOpen(false);
-  };
-
   return (
-    <div className="min-h-screen bg-base-200">
-      <Navbar setIsCheckoutOpen={setIsCheckoutOpen} />
+    <Router>
+      <div className="min-h-screen bg-gray-100">
+        <Routes>
+          <Route
+            path="/"
+            element={<Navigate to="/home" replace />}
+          />
 
-      <MainSections />
+          <Route
+            path="/home"
+            element={<Home />}
+          />
+          <Route
+            path="/login"
+            element={<LoginPage />}
+          />
+          <Route
+            path="/register"
+            element={<RegisterPage />}
+          />
+          <Route
+            path="/success"
+            element={<SuccessPage />}
+          />
 
-      <CheckoutModal
-        isCheckoutOpen={isCheckoutOpen}
-        setIsCheckoutOpen={setIsCheckoutOpen}
-        handleCheckout={handleCheckout}
-      />
-    </div>
+          <Route
+            path="*"
+            element={<Navigate to="/home" replace />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

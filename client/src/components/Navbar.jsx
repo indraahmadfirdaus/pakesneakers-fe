@@ -1,15 +1,18 @@
 import React from 'react'
 import useCartStore from '../store/cart'
-import { ShoppingCart, X, Minus, Plus } from 'lucide-react';
+import { ShoppingCart, X, Minus, Plus, Menu } from 'lucide-react';
 
 
-const Navbar = ({ setIsCheckoutOpen }) => {
+const Navbar = () => {
     const cart = useCartStore(st => st.cart)
     return (
         <>
-            <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8">
+            <div className="navbar bg-base-100 shadow-sm px-4 sm:px-8">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl">PakeSneakers</a>
+                    <label className="btn btn-ghost normal-case text-xl drawer-button font-bold" htmlFor="my-drawer">
+                        <Menu />
+                        PakeSneakers
+                    </label>
                 </div>
                 <div className="flex-none">
                     <button className="btn btn-ghost" onClick={() => document.getElementById('modal_checkout').showModal()}>
