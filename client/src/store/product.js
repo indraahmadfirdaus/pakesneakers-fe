@@ -8,9 +8,9 @@ const useProductStore = create(
             shoesData: [
                 {
                     id: 1,
-                    name: "Classic Runner",
+                    name: "Classic Every-Day User",
                     price: 140_000,
-                    description: "Comfortable everyday running shoes",
+                    description: "Comfortable everyday shoes",
                     image: "https://superga.id/cdn/shop/products/01-2750COTUCLASSIC-GREENGREY_52_900x.jpg?v=1626674910"
                 },
                 {
@@ -22,9 +22,9 @@ const useProductStore = create(
                 },
                 {
                     id: 3,
-                    name: "Sport Elite",
+                    name: "Trendy Low-Profile",
                     price: 300_000,
-                    description: "Professional sports performance shoes",
+                    description: "For your low-profile style uses",
                     image: "https://superga.id/cdn/shop/products/2750COTUCLASSICC57-2_1024x1024@2x.jpg?v=1626950650"
                 },
                 {
