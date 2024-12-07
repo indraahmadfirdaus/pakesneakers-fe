@@ -25,7 +25,7 @@ const Home = () => {
             if (response.ok) {
                 const data = await response.json();
                 // checkout via redirect to the payment page
-                window.location.href = data.redirect_url;
+                window.location.href = data.transaction.redirect_url;
             }
         } catch (error) {
             console.error('Checkout failed:', error);
