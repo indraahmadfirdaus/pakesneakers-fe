@@ -1,4 +1,4 @@
-import { User } from 'lucide-react'
+import { ShoppingBag, User } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,6 +14,8 @@ const Drawer = () => {
                     <p className='text-xl mb-4 font-bold'>PakeSneakers</p>
 
                     {/* Sidebar content here */}
+                    <li className='text-dark'><a
+                    ><ShoppingBag /> My Orders </a></li>
                     <li className='text-error'><a
                         onClick={() => {
                             nav('/login')

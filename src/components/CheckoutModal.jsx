@@ -8,6 +8,7 @@ const CheckoutModal = ({ handleCheckout }) => {
     const removeFromCart = useCartStore(st => st.removeFromCart)
     const getTotalPrice = useCartStore(st => st.getTotalPrice)
 
+
     return (
         <>
             <dialog className="modal" id="modal_checkout">
